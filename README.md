@@ -47,13 +47,6 @@ python -m venv .venv
 
 训练 seed：0–4；测试 seed：5–9（见 `config.py`）。
 
-## 论文中如何引用本仓库
-
-建议在 **§5.1 或 §6.1** 末尾加一句，例如：
-
-> 仿真原型与实验脚本见 https://github.com/YOUR_USERNAME/kv-cache-sim。
-
-也可在摘要或脚注给出链接，便于评阅复现实验。
 
 ## 说明
 
