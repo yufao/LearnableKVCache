@@ -1,0 +1,36 @@
+# 实验参数配置（与论文表 6-1 对应）
+
+# 块大小与物理池
+BLOCK_SIZE = 16
+POOL_SIZE = 32
+SEQ_LENGTHS = [512, 1024, 2048]
+POOL_SIZES = [8, 16, 32, 64]
+FIXED_SEQ_FOR_EXP2 = 1024
+
+# 逻辑块编码：logical_id = req_id * STRIDE + block_id
+LOGICAL_BLOCK_STRIDE = 256
+MULTI_REQUEST_COUNT = 2
+MULTI_SEQ_LENGTHS = [512, 1024, 2048]
+
+# 随机 trace 参数（§5.2）
+SEQ_LENGTH_JITTER = 0.1
+SPARSE_SKIP_PROB = 0.15
+PREFIX_RATIO = 0.25
+MIN_REQUESTS = 2
+MAX_REQUESTS = 4
+
+# 训练 / 测试 seed 划分（§5.3）
+EXPERIMENT_SEEDS = list(range(10))
+TRAIN_SEEDS = list(range(5))
+TEST_SEEDS = list(range(5, 10))
+
+# Learned-RD / Learned-RF
+TREE_MAX_DEPTH = 4
+FOREST_N_TREES = 5
+FOREST_FEATURE_FRACTION = 0.8
+PREFETCH_THRESHOLD = 2
+PREFETCH_HORIZON = 3
+TRAIN_SEQ_LENGTH = 512
+
+RESULTS_CSV_DIR = "results/csv"
+RESULTS_FIG_DIR = "results/figures"
